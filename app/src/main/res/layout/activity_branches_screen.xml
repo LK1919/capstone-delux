@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.BranchesScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarConstraintBranches"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/actionBarBackArrowBranches"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/grey"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Branches"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/actionBarBackArrowBranches"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/antipoloBranchLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionBarConstraintBranches"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/antipoloTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Antipolo Branches"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/antipoloFirstBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#272 Masinag Market, Sumulong Hi-Way, Brgy. Mayamot, Antipolo City 1901"
+                    android:layout_below="@+id/antipoloTitleText"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edittext_border"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/antipoloSecondBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2nd Floor, SM Cherry Antipolo, Marcos Highway, Antipolo City"
+                    android:layout_below="@+id/antipoloFirstBranch"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edittext_border"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/marikinaBranchLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/antipoloBranchLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/marikinaTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marikina Branches"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/marikinaFirstBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#2 Bayan-bayanan Ave. Concepcion Uno 1807 Marikina City, Philippines"
+                    android:layout_below="@+id/marikinaTitleText"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edittext_border"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/marikinaSecondBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. 23 Philtrust Bank Building, Sumulong Hi-way corner P. Burgos st. Brgy. Sto. Nino, Marikina City"
+                    android:layout_below="@+id/marikinaFirstBranch"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edittext_border"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/marikinaThirdBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shoe Ave, Sta Elena 1800 Marikina City, Philippines"
+                    android:layout_below="@+id/marikinaSecondBranch"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edittext_border"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pasigBranchLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actionBarConstraintBranches"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pasigTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pasig Branches"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:id="@+id/pasigFirstBranch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#34-A, A. Mabini st. Kapasigan, Pasig City, Philippines"
+                        android:layout_below="@+id/pasigTitleText"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:background="@drawable/edittext_border"
+                        android:padding="15dp"
+                        android:gravity="center_horizontal" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

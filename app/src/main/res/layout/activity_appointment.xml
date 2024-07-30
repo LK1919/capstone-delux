@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".patient.AppointmentActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/ImgApp"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- Name TextView -->
+        <TextView
+            android:id="@+id/txtAppName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_border"
+            android:padding="13dp"
+            android:text="Firstname:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImgApp" />
+
+        <!-- Surname TextView -->
+        <TextView
+            android:id="@+id/txtAppSurname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_border"
+            android:padding="13dp"
+            android:text="Lastname:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppName" />
+
+        <!-- Age TextView -->
+        <TextView
+            android:id="@+id/txtAppAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:visibility="gone"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_border"
+            android:padding="13dp"
+            android:text="Age:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppSurname" />
+
+        <!-- Field TextView -->
+        <TextView
+            android:id="@+id/txtAppField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_border"
+            android:padding="13dp"
+            android:text="Branch:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppAge" />
+
+        <TextView
+            android:id="@+id/txtAppHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="30dp"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:text="Appointment Hour"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppField"
+            app:layout_constraintStart_toStartOf="@+id/txtAppField"
+            app:layout_constraintEnd_toEndOf="@+id/btnSelectHour"
+            app:layout_constraintBottom_toTopOf="@+id/btnSelectHour" />
+
+        <Button
+            android:id="@+id/btnMakeApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Save Appointment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSelectHour"
+            app:layout_constraintEnd_toEndOf="@+id/txtAppField"
+             />
+
+        <ImageButton
+            android:id="@+id/btnSelectHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="10dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppHour"
+            app:layout_constraintStart_toEndOf="@+id/btnSelectDate"
+            app:srcCompat="@drawable/ic_appointment_hour"  />
+
+
+        <ImageButton
+            android:id="@+id/btnSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSelectHour"
+            app:layout_constraintStart_toStartOf="@+id/txtAppField"
+            app:srcCompat="@drawable/ic_appointment_date" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

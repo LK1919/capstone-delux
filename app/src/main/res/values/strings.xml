@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DeepAR_Example</string>
+    <string name="app_name">Sarabia Optical</string>
     <string name="title_activity_basic">BasicActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,20 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="raybanScreenDescription">Step into classic cool with the Ray-Ban Justin sunglasses. Featuring a bold square design and sleek matte black frame, these shades offer a modern twist on the iconic Wayfarer. With larger lenses and a rubberized finish, they provide comfort, 100% UV protection, and effortless style for any occasion.</string>
+    <string name="logoutText">Are you sure you want to logout?</string>
+
+    <string name="aviatorScreenDescription">Classic, sleek, and effortlessly cool, aviator glasses exude timeless style and a hint of adventure. Originally designed for pilots, these iconic frames feature teardrop-shaped lenses and thin metal frames, providing both style and functionality. Whether you\'re soaring through the skies or strolling down city streets, aviator glasses add a touch of daring flair to any look.</string>
+
+    <string name="titaniumScreenDescription">Lightweight yet exceptionally durable, titanium frames offer the perfect blend of strength and style. Crafted from the highest quality titanium, these glasses are hypoallergenic, corrosion-resistant, and incredibly comfortable to wear. Their sleek design and modern aesthetic make them a favorite choice for those seeking both fashion and function. With titanium glasses, you can enjoy unparalleled durability without sacrificing on style.</string>
+
+    <string-array name="branches">
+        <item>No. 23 Philtrust Bank Building, Sumulong Hi-way corner P. Burgos st. Brgy. Sto. Nino, Marikina City</item>
+        <item>Shoe Ave. Sta. Elena Marikina City</item>
+        <item>#272 Masinag Market, Sumulong Hi-way, Brgy. Mayamot, Antipolo City</item>
+        <item>2nd Floor, SM Cherry Antipolo, Marcos Highway, Antipolo City</item>
+        <item>#34 A, A. Mabini st. Kapasigan Pasig City</item>
+    </string-array>
 </resources>

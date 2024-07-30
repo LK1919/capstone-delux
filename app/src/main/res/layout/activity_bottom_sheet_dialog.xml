@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+
+        <!--image view for displaying course image-->
+        <ImageView
+            android:id="@+id/idIVCourse"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/sarabia_logo" />
+
+        <!--text view for displaying course name-->
+        <TextView
+            android:id="@+id/setAppointmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:layout_toRightOf="@id/idIVCourse"
+            android:text="Set an appointment"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--text view for displaying course tracks-->
+        <TextView
+            android:id="@+id/setAppointmentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setAppointmentTitle"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:layout_toRightOf="@id/idIVCourse"
+            android:text="Time"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/noTimeSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No time selected"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/setAppointmentTime"
+            android:layout_below="@+id/setAppointmentTitle"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <!--text view for displaying course duration-->
+
+        <TextView
+            android:id="@+id/setAppointmentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setAppointmentTime"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:layout_toRightOf="@id/idIVCourse"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnSelectDate2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#00FFFFFF"-->
+<!--            android:layout_below="@+id/idTVCourseTracks"-->
+<!--            android:layout_toRightOf="@+id/idTVCourseDuration"-->
+<!--            android:layout_marginLeft="100dp"-->
+<!--            app:srcCompat="@drawable/ic_appointment_date" />-->
+
+        <TextView
+            android:id="@+id/noDateSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd/MM/yyyy"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/setAppointmentDate"
+            android:layout_below="@+id/noTimeSelected"
+            android:layout_marginLeft="23dp" />
+
+        <!--button for dismissing our dialog-->
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/noTimeSelected"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="-4dp"
+            android:layout_toRightOf="@+id/noDateSelected"
+            android:text="Select"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/idBtnSetAppointment"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVCourse"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_border"
+            android:text="Set Appointment"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/idBtnDismiss"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/idBtnSetAppointment"
+            android:layout_below="@id/idIVCourse"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_border"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/idBtnBranches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idBtnSetAppointment"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_border"
+            android:text="Check Branches"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

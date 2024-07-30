@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.RayBanGlasses">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aviatorScreenActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/actionBarBackArrowAviatorGlasses"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/grey"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/actionBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Square Matte Black Frame"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/actionBarBackArrowAviatorGlasses"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="915dp"
+        android:orientation="vertical"
+        android:id="@+id/aviatorRow1"
+        app:layout_constraintTop_toBottomOf="@+id/aviatorScreenActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/aviatorScreenImage"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_alignBottom="@+id/aviatorScreenImage"
+                android:src="@drawable/rayban_glasses"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/aviatorScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aviatorScreenImage"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="Ray-Ban Justin - Square Matte Black Frame Sunglasses"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/aviatorDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="@string/raybanScreenDescription"
+                android:layout_below="@+id/aviatorScreenTitle"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:layout_margin="30dp" />
+
+            <Button
+                android:id="@+id/virtualTryOn"
+                android:layout_width="300dp"
+                android:layout_height="14dp"
+                android:layout_below="@+id/aviatorDescription"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="320dp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/grey"
+                android:text="Try it on"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

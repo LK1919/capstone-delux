@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.AppointmentVerificationFirst">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarConstraintBookAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/actionBarBackArrowBookAppointment"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/grey"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Book an appointment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/actionBarBackArrowBookAppointment"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bookAppointmentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionBarConstraintBookAppointment"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/bookAppointmentCard"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentTitle"
+                    android:text="Appointment Details"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentDate"
+                    android:text="Date:"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bookAppointmentTitle"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentDateValues"
+                    android:text="May 28, 2024"
+                    android:layout_toRightOf="@+id/bookAppointmentDate"
+                    android:layout_below="@+id/bookAppointmentTitle"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentTime"
+                    android:text="Time:"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bookAppointmentDate"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentTimeValues"
+                    android:text="10:00AM"
+                    android:layout_toRightOf="@+id/bookAppointmentTime"
+                    android:layout_below="@+id/bookAppointmentDateValues"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentLocation"
+                    android:text="Location:"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bookAppointmentTime"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentLocationValues"
+                    android:text="Phil. Trust Branch"
+                    android:layout_toRightOf="@+id/bookAppointmentLocation"
+                    android:layout_below="@+id/bookAppointmentTimeValues"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentService"
+                    android:text="Service:"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bookAppointmentLocation"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentServiceValues"
+                    android:text="Check-up"
+                    android:layout_toRightOf="@+id/bookAppointmentService"
+                    android:layout_below="@+id/bookAppointmentLocationValues"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentAssignedDoc"
+                    android:text="Assigned Doctor:"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bookAppointmentService"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookAppointmentAssignedDocValues"
+                    android:text="Dra. Barbara S. Opiz, OD"
+                    android:layout_toRightOf="@+id/bookAppointmentAssignedDoc"
+                    android:layout_below="@+id/bookAppointmentServiceValues"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookAppointmentSecond"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookAppointmentLinearLayout">
+
+
+        <ImageView
+            android:id="@+id/confirmLogo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/baseline_check_circle_24" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/confirmLogo"
+            android:text="I confirm that the details are correct."
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/bookAppointmentSecond">
+
+        <Button
+            android:id="@+id/confirmAppointmentBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Appointment"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By confirming this appointment, you are agreeing to our terms and conditions."
+            android:textSize="15sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

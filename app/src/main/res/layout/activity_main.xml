@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".camera.MainActivity">
 
 
     <SurfaceView
@@ -47,7 +47,6 @@
 
         <ImageButton
             android:id="@+id/openActivity"
-
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="false"
@@ -57,7 +56,22 @@
             android:layout_marginEnd="5dp"
             android:background="@null"
             android:scaleType="centerInside"
+            android:visibility="invisible"
             android:src="@drawable/open_new_activity" />
+
+        <TextView
+            android:id="@+id/quickAppointmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="-47dp"
+            android:layout_toLeftOf="@+id/openActivity"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:padding="10dp"
+            android:text="Quick Appointment"
+            android:textSize="10sp" />
 
         <ImageButton
             android:id="@+id/previousMask"
@@ -97,7 +111,7 @@
             android:elegantTextHeight="true"
             android:fadingEdgeLength="56dp"
             android:requiresFadingEdge="vertical"
-            android:text="  Screenshot  "
+            android:text="  Photo  "
             android:textAlignment="center" />
 
         <TextView
@@ -112,7 +126,7 @@
             android:elegantTextHeight="true"
             android:fadingEdgeLength="32dp"
             android:requiresFadingEdge="horizontal"
-            android:text="  Record  "
+            android:text="  Video  "
             android:textAlignment="center" />
 
 

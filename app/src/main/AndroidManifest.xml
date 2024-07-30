@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,21 +21,66 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <uses-native-library
-            android:name="libOpenCL.so"
-            android:required="false" />
-
-        <uses-native-library
-            android:name="libOpenCL-pixel.so"
-            android:required="false" />
-
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".BasicActivity"
-            android:label="@string/title_activity_basic"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity"
+            android:name=".home.bottom_sheet_dialog"
+            android:exported="false" />
+        <activity
+            android:name=".patient.AppointmentActivityModalSheet"
+            android:exported="false" />
+        <activity
+            android:name=".sample.TakePicture"
+            android:exported="false" />
+        <activity
+            android:name=".home.TitaniumGlasses"
+            android:exported="false" />
+        <activity
+            android:name=".camera.TitaniumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.AviatorGlasses"
+            android:exported="false" />
+        <activity
+            android:name=".camera.AviatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.SettingsAccountScreen"
+            android:exported="false" />
+        <activity
+            android:name=".home.SettingsLogoutScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.NewsDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorProfileEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientMyAppointmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientLoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +88,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".patient.PatientProfileEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.AppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.AppointmentVerificationSecond"
+            android:exported="false" />
+        <activity
+            android:name=".home.SetAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".home.PromosScreen"
+            android:exported="false" />
+        <activity
+            android:name=".home.RayBanGlasses"
+            android:exported="false" />
+        <activity
+            android:name=".home.BranchesScreen"
+            android:exported="false" />
+        <activity
+            android:name=".home.BottomNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".home.GlassesScreen"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.SignupActivity"
+            android:exported="false" />
+
+        <uses-native-library
+            android:name="libOpenCL.so"
+            android:required="false" />
+        <uses-native-library
+            android:name="libOpenCL-pixel.so"
+            android:required="false" />
+
+        <activity
+            android:name=".camera.BasicActivity"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".camera.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

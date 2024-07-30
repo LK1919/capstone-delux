@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "186934050980",
+    "project_id": "deepar-sarabia",
+    "storage_bucket": "deepar-sarabia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186934050980:android:715f9054972dc99b762631",
+        "android_client_info": {
+          "package_name": "ai.deepar.deepar_example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCeOX8dlE-z9JnyAwoOB62KLQoz1Mcd-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
