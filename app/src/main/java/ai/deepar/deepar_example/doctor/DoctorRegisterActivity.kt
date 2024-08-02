@@ -76,12 +76,12 @@ class DoctorRegisterActivity : AppCompatActivity() {
               val user = auth.currentUser
               val doctorData = DoctorData(
                 user!!.uid,
-                DoctorName,
-                DoctorSurname,
-                DoctorBranch,
-                DoctorEmail,
-                DoctorPassword,
-                ""
+//                DoctorName,
+//                DoctorSurname,
+//                DoctorBranch,
+//                DoctorEmail,
+//                DoctorPassword,
+//                ""
               )
               db.collection("doctors").document(user.email!!).set(doctorData)
                 .addOnSuccessListener {

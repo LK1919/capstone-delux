@@ -23,10 +23,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".home.bottom_sheet_dialog"
+            android:name=".home.AppointmentBottomSheetDialog"
             android:exported="false" />
         <activity
-            android:name=".patient.AppointmentActivityModalSheet"
+            android:name=".home.bottom_sheet_dialog"
             android:exported="false" />
         <activity
             android:name=".sample.TakePicture"

@@ -50,12 +50,12 @@ class DoctorProfileActivity : AppCompatActivity() {
           if (document != null) {
             val doctorData = document.toObject(DoctorData::class.java)
             if (doctorData != null) {
-              txtDName.text = ("Name: " + doctorData.first) ?: "N/A"
-              txtDSurname.text = ("Surname: " + doctorData.last) ?: "N/A"
-//              txtDAge.text = ("Age: " + doctorData.age) ?: "N/A"
-              txtDEmail.text = ("Email: " + doctorData.email) ?: "N/A"
-              txtDField.text = ("Field: " + doctorData.field) ?: "N/A"
-              Glide.with(this).load(doctorData.image).into(imgDoctorProfile)
+//              txtDName.text = ("Name: " + doctorData.first) ?: "N/A"
+//              txtDSurname.text = ("Surname: " + doctorData.last) ?: "N/A"
+////              txtDAge.text = ("Age: " + doctorData.age) ?: "N/A"
+//              txtDEmail.text = ("Email: " + doctorData.email) ?: "N/A"
+//              txtDField.text = ("Field: " + doctorData.field) ?: "N/A"
+//              Glide.with(this).load(doctorData.image).into(imgDoctorProfile)
             }
           } else {
             Log.d("DocumentSnapshot", "No such document")
@@ -133,11 +133,11 @@ class DoctorProfileActivity : AppCompatActivity() {
       .addOnSuccessListener { document ->
         if (document != null && document.exists()) {
           val doctorData = document.toObject(DoctorData::class.java)
-          txtDName.text = "Name: ${doctorData?.first}"
-          txtDSurname.text = "Surname: ${doctorData?.last}"
-//          txtDAge.text = "Age: ${doctorData?.age}"
-          txtDEmail.text = "Email: ${doctorData?.email}"
-          txtDField.text = "Field: ${doctorData?.field}"
+//          txtDName.text = "Name: ${doctorData?.first}"
+//          txtDSurname.text = "Surname: ${doctorData?.last}"
+////          txtDAge.text = "Age: ${doctorData?.age}"
+//          txtDEmail.text = "Email: ${doctorData?.email}"
+//          txtDField.text = "Field: ${doctorData?.field}"
         }
       }
       .addOnFailureListener { e ->

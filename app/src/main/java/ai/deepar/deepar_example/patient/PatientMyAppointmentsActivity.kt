@@ -48,7 +48,7 @@ class PatientMyAppointmentsActivity : AppCompatActivity() {
         setPositiveButton("Yes") { _, _ ->
           patientAppointmentService.deleteAppointment(
             patientEmail,
-            selectedAppointment.doctorEmail!!,
+            selectedAppointment.date!!,
             selectedAppointment.id!!
           ) { success ->
             if (success) {

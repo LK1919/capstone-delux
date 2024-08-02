@@ -21,13 +21,14 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
 import java.util.Calendar
 
 class AppointmentActivity : AppCompatActivity() {
-  lateinit var txtAppName: TextView
-  lateinit var txtAppSurname: TextView
-  lateinit var txtAppAge: TextView
-  lateinit var txtAppField: TextView
+//  lateinit var txtAppName: TextView
+//  lateinit var txtAppSurname: TextView
+//  lateinit var txtAppAge: TextView
+//  lateinit var txtAppField: TextView
   lateinit var txtAppHour: TextView
   lateinit var btnSelectHour: ImageButton
   lateinit var btnSelectDate: ImageButton
@@ -40,38 +41,40 @@ class AppointmentActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_appointment)
 
-    txtAppName = findViewById(R.id.txtAppName)
-    txtAppSurname = findViewById(R.id.txtAppSurname)
-    txtAppAge = findViewById(R.id.txtAppAge)
-    txtAppField = findViewById(R.id.txtAppField)
+//    txtAppName = findViewById(R.id.txtAppName)
+//    txtAppSurname = findViewById(R.id.txtAppSurname)
+//    txtAppAge = findViewById(R.id.txtAppAge)
+//    txtAppField = findViewById(R.id.txtAppField)
     txtAppHour = findViewById(R.id.txtAppHour)
     btnSelectHour = findViewById(R.id.btnSelectHour)
     btnSelectDate = findViewById(R.id.btnSelectDate)
-    ImgApp = findViewById(R.id.ImgApp)
+//    ImgApp = findViewById(R.id.ImgApp)
     btnMakeApp = findViewById(R.id.btnMakeApp)
 
-    val doctorName = intent.getStringExtra("name")
-    val doctorSurname = intent.getStringExtra("surname")
-    val doctorAge = intent.getStringExtra("age")
-    val doctorField = intent.getStringExtra("field")
-    val doctorImage = intent.getStringExtra("image")
+//    val doctorName = intent.getStringExtra("name")
+//    val doctorSurname = intent.getStringExtra("surname")
+//    val doctorAge = intent.getStringExtra("age")
+//    val doctorField = intent.getStringExtra("field")
+//    val doctorImage = intent.getStringExtra("image")
     val patientImage = intent.getStringExtra("patientImage")
     val patientFullName = intent.getStringExtra("patientName")
 
-    txtAppName.text = "Name: $doctorName"
-    txtAppSurname.text = "Surname: $doctorSurname"
-    txtAppAge.text = "Age: $doctorAge"
-    txtAppField.text = "Branch: $doctorField"
-    Glide.with(this).load(doctorImage).into(ImgApp)
+//    txtAppName.text = "Name: $doctorName"
+//    txtAppSurname.text = "Surname: $doctorSurname"
+//    txtAppAge.text = "Age: $doctorAge"
+//    txtAppField.text = "Branch: $doctorField"
+//    Glide.with(this).load(doctorImage).into(ImgApp)
 
     val currentDate = Calendar.getInstance()
     val year = currentDate.get(Calendar.YEAR)
     val month = currentDate.get(Calendar.MONTH)
     val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
+    var simpleDateFormat: SimpleDateFormat
     val datePickerDialog = DatePickerDialog(
       this,
       DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDayOfMonth ->
         val selectedDate = Calendar.getInstance()
+        simpleDateFormat = SimpleDateFormat("E.LLLL.yyyy")
         selectedDate.set(selectedYear, selectedMonth, selectedDayOfMonth)
         val dayOfWeek = selectedDate.get(Calendar.DAY_OF_WEEK)
 
@@ -128,7 +131,7 @@ class AppointmentActivity : AppCompatActivity() {
           )
         }
       }
-    }, hour, minute, true)
+    }, hour, minute, false)
 
     btnSelectHour.setOnClickListener {
       if (Date.isEmpty()) {
@@ -139,27 +142,27 @@ class AppointmentActivity : AppCompatActivity() {
     }
     btnMakeApp.setOnClickListener {
       val patientEmail = FirebaseAuth.getInstance().currentUser?.email
-      val doctorEmail = intent.getStringExtra("email")
-      val patientImage = patientImage
-      val doctorImage = doctorImage
+//      val doctorEmail = intent.getStringExtra("email")
+//      val patientImage = patientImage
+//      val doctorImage = doctorImage
       val appointmentDate = Date
       val appointmentHour = selectedHour
 
       if (patientEmail != null && appointmentDate.isNotEmpty() && appointmentHour.isNotEmpty()) {
-        val doctorFullname = doctorName + " " + doctorSurname
+//        val doctorFullname = doctorName + " " + doctorSurname
         val appointmentInfo = AppointmentData(
           null,
-          doctorEmail,
+//          doctorEmail,
           patientEmail,
           patientFullName,
-          patientImage,
-          doctorFullname,
-          doctorImage,
-          doctorField,
+//          patientImage,
+//          doctorFullname,
+//          doctorImage,
+//          doctorField,
           appointmentDate,
           appointmentHour
         )
-        addAppointmentToFirestore(patientEmail,doctorEmail!!,appointmentInfo)
+        addAppointmentToFirestore(patientEmail, appointmentDate,appointmentInfo)
         Toast.makeText(this, "Appointment Created Successfully", Toast.LENGTH_LONG).show()
         val intent = Intent(this, PatientMyAppointmentsActivity::class.java)
         startActivity(intent)

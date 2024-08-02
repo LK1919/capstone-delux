@@ -20,15 +20,15 @@ class DoctorAppointmentAdapter(private val context: Activity, private val list:L
         val r_appName = rootView.findViewById<TextView>(R.id.r_appDName)
         val r_appDate = rootView.findViewById<TextView>(R.id.r_appDDate)
         val r_appHour = rootView.findViewById<TextView>(R.id.r_appDHour)
-        val r_appNote = rootView.findViewById<TextView>(R.id.r_appDNote)
-        val r_appImg = rootView.findViewById<ImageView>(R.id.r_appDImg)
+//        val r_appNote = rootView.findViewById<TextView>(R.id.r_appDNote)
+//        val r_appImg = rootView.findViewById<ImageView>(R.id.r_appDImg)
         val appointment = list[position]
         r_appName.text = appointment.patientName
         r_appDate.text = "Date: " + appointment.date
         r_appHour.text = "Hour: " + appointment.hour
-        r_appNote.text = "Note: " + appointment.note
+//        r_appNote.text = "Note: " + appointment.note
 
-        Glide.with(context).load(appointment.patientImg).into(r_appImg)
+//        Glide.with(context).load(appointment.patientImg).into(r_appImg)
         return rootView
     }
 

@@ -15,18 +15,18 @@ class PatientAppointmentAdapter(private val context: Activity, private val list:
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val rootView = context.layoutInflater.inflate(R.layout.custom_appointment,null,true)
-        val r_appName = rootView.findViewById<TextView>(R.id.r_appPName)
+//        val r_appName = rootView.findViewById<TextView>(R.id.r_appPName)
         val r_appDate = rootView.findViewById<TextView>(R.id.r_appPDate)
         val r_appHour = rootView.findViewById<TextView>(R.id.r_appPHour)
-        val r_appField = rootView.findViewById<TextView>(R.id.r_appPField)
-        val r_appImg = rootView.findViewById<ImageView>(R.id.r_appPImg)
+//        val r_appField = rootView.findViewById<TextView>(R.id.r_appPField)
+//        val r_appImg = rootView.findViewById<ImageView>(R.id.r_appPImg)
 
         val appointment = list.get(position)
-        r_appName.text = appointment.doctorName
+//        r_appName.text = appointment.doctorName
         r_appDate.text = "Date: " + appointment.date
         r_appHour.text = "Hour: " + appointment.hour
-        r_appField.text = appointment.doctorBranch
-        Glide.with(context).load(appointment.doctorImg).into(r_appImg)
+//        r_appField.text = appointment.doctorBranch
+//        Glide.with(context).load(appointment.doctorImg).into(r_appImg)
 
         return rootView
     }

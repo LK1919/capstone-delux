@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="2dp">
+
+        <ImageView
+            android:id="@+id/bsdLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/sarabia_logo" />
+
+        <TextView
+            android:id="@+id/bsdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set an appointment"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/bsdLogo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bsdDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bsdTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/bsdLogo"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/bsdSelectedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bsdTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/bsdDateTxt"
+            android:text="mm-DD-yyyy"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/btnSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_appointment_date"
+            android:layout_toRightOf="@+id/bsdSelectedDate"
+            android:layout_below="@+id/bsdTitle"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/bsdTimeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_below="@+id/bsdDateTxt"
+            android:layout_toRightOf="@+id/bsdLogo"
+            android:layout_marginTop="20dp"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/bsdSelectedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hh:mm"
+            android:layout_below="@+id/bsdSelectedDate"
+            android:layout_toRightOf="@+id/bsdTimeTxt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/btnSelectHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_appointment_hour"
+            android:layout_below="@+id/btnSelectDate"
+            android:layout_toRightOf="@+id/bsdSelectedTime"
+            android:layout_marginLeft="56dp" />
+
+        <Button
+            android:id="@+id/bsdSetAppointmentBtn"
+            android:layout_width="180dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/bsdTimeTxt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/blue"
+            android:text="Set appointment"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bsdCancelAppointmentBtn"
+            android:layout_width="180dp"
+            android:layout_height="55dp"
+            android:text="Cancel"
+            android:layout_toRightOf="@+id/bsdSetAppointmentBtn"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_below="@+id/btnSelectHour"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bsdCheckBranchesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check available Branches"
+            android:layout_below="@+id/bsdSetAppointmentBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

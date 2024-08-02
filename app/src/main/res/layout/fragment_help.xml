@@ -56,15 +56,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_warning_24"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp" />
+
                 <TextView
+                    android:id="@+id/reportAnIssueText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Report an Issue"
                     android:textSize="17sp"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="45dp"
-
-                    />
+                    android:layout_marginStart="45dp" />
 
             </RelativeLayout>
 
@@ -78,6 +84,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_support_agent_24"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -100,6 +113,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_error_outline_24"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -16,6 +16,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import java.util.Date
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,30 +59,38 @@ class HomePage : Fragment() {
       startActivity(Intent(requireActivity(), BranchesScreen::class.java))
     }
 
-//    val btnSetAppointments = view.findViewById<CardView>(R.id.setAppointmentCard)
-//    btnSetAppointments.setOnClickListener {
-//      startActivity(Intent(requireActivity(), AppointmentActivity::class.java))
-//    }
-
-    val btnShowAppointmentsBottomSheet = view.findViewById<CardView>(R.id.setAppointmentCard)
-    btnShowAppointmentsBottomSheet.setOnClickListener {
-      val dialog = BottomSheetDialog(this.requireContext())
-      val view2 = layoutInflater.inflate(R.layout.activity_bottom_sheet_dialog, null)
-      val btnClose = view2.findViewById<Button>(R.id.idBtnDismiss)
-      val btnSetAppointment = view2.findViewById<Button>(R.id.idBtnSetAppointment)
-
-      btnClose.setOnClickListener {
-        dialog.dismiss()
-      }
-
-      btnSetAppointment.setOnClickListener {
-        startActivity(Intent(requireActivity(), PatientMyAppointmentsActivity::class.java))
-      }
-
-      dialog.setCancelable(false)
-      dialog.setContentView(view2)
-      dialog.show()
+    val btnSetAppointments = view.findViewById<CardView>(R.id.setAppointmentCard)
+    btnSetAppointments.setOnClickListener {
+      startActivity(Intent(requireActivity(), AppointmentActivity::class.java))
     }
+
+    // bottom sheet dialog option
+//    val btnShowAppointmentsBottomSheet = view.findViewById<CardView>(R.id.setAppointmentCard)
+//    btnShowAppointmentsBottomSheet.setOnClickListener {
+//      val dialog = BottomSheetDialog(this.requireContext())
+//      val view2 = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
+//      val btnClose = view2.findViewById<Button>(R.id.bsdCancelAppointmentBtn)
+//      val btnSetAppointment = view2.findViewById<Button>(R.id.bsdSetAppointmentBtn)
+//      val checkAvailBranches = view2.findViewById<Button>(R.id.bsdCheckBranchesBtn)
+//
+//      btnClose.setOnClickListener {
+//        dialog.dismiss()
+//      }
+//
+//      btnSetAppointment.setOnClickListener {
+//        Toast.makeText(this@HomePage.requireContext(), "Appointment set successfully", Toast.LENGTH_LONG).show()
+//        startActivity(Intent(requireActivity(), PatientMyAppointmentsActivity::class.java))
+//      }
+//
+//      checkAvailBranches.setOnClickListener {
+//        startActivity(Intent(requireActivity(), BranchesScreen::class.java))
+//      }
+//
+//
+//      dialog.setCancelable(false)
+//      dialog.setContentView(view2)
+//      dialog.show()
+//    }
 
     val btnGlasses = view.findViewById<CardView>(R.id.glassesCard)
     btnGlasses.setOnClickListener {

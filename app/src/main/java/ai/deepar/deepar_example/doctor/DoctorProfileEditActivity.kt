@@ -63,16 +63,16 @@ class DoctorProfileEditActivity : AppCompatActivity() {
         if (document != null && document.exists()) {
           val doctorData = document.toObject(DoctorData::class.java)
 
-          edtDName.setText(doctorData?.first)
-          edtDSurname.setText(doctorData?.last)
+//          edtDName.setText(doctorData?.first)
+//          edtDSurname.setText(doctorData?.last)
 //          edtDAge.setText(doctorData?.age)
 
           val specialties = resources.getStringArray(R.array.branches)
           val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, specialties)
           adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
           spinnerField.adapter = adapter
-          val selectedIndex = specialties.indexOf(doctorData?.field)
-          spinnerField.setSelection(selectedIndex)
+//          val selectedIndex = specialties.indexOf(doctorData?.field)
+//          spinnerField.setSelection(selectedIndex)
         }
       }
       .addOnFailureListener { e ->
@@ -241,13 +241,13 @@ class DoctorProfileEditActivity : AppCompatActivity() {
 
     val doctorDataInfo = DoctorData(
       UID = userId,
-      first = first,
-      last = last,
-//      age = age,
-      field = field,
-      email = email,
-      password = password,
-      image = image
+//      first = first,
+//      last = last,
+////      age = age,
+//      field = field,
+//      email = email,
+//      password = password,
+//      image = image
     )
 
     db.collection("doctors")
